@@ -100,12 +100,21 @@ assumptions differ.
 
 ![Funded long-only versus long/short momentum](tsmom_results/funded_direction.png)
 
-### Validation and simulation
+### Historical walk-forward validation
 
 - **Annual walk-forward diagnostics:** select among five fixed candidates on trailing past
   returns, freeze the rule, and test the following year. Annual tests restart from cash and
   include entry and liquidation fees. Across 2016–2024, selected-rule Sharpe was **0.56** versus
   **0.45** for the daily reference using the same annual resets. These runs exclude funding.
+
+### Monte Carlo simulation
+
+I added Monte Carlo analysis to examine variation in terminal wealth, drawdowns, and cost
+sensitivity across resampled paths. Consecutive return blocks retain some dependence within
+each block, so I compared several block lengths rather than assuming independent daily returns.
+The P&L simulations evaluate the original daily and weekly long/short rules without funding;
+the full-rule simulations recalculate the original ensemble on joint synthetic asset paths.
+
 - **P&L bootstrap:** 5,000 three-year paths per scenario, using paired gross returns and fees
   from 2020–2024 and moving blocks of 20, 63, or 126 sessions. Cost stresses share random draws.
   With 63-session blocks, daily-rule loss frequency was **16.2%**, increasing to **23.3%** under
