@@ -1,0 +1,66 @@
+{
+  "walk_forward_candidates": {
+    "Daily": {
+      "target": "ensemble"
+    },
+    "Weekly": {
+      "target": "ensemble",
+      "frequency": "weekly"
+    },
+    "Daily band 2.5%": {
+      "target": "ensemble",
+      "band": 0.025
+    },
+    "Slower daily": {
+      "target": "slower"
+    },
+    "Slower weekly": {
+      "target": "slower",
+      "frequency": "weekly"
+    }
+  },
+  "selection_metric": "past net Sharpe, zero RF",
+  "train_years": 5,
+  "first_test_year": 2016,
+  "baseline_execution": "next_open",
+  "weekly_schedule": "first available session of each ISO week",
+  "per_asset_one_way_cost_bps": {
+    "SPY": 1.5,
+    "TLT": 2.0,
+    "GLD": 2.0,
+    "USO": 5.5,
+    "DBA": 5.5,
+    "UUP": 2.5
+  },
+  "band_absolute_weight_gaps": [
+    0.01,
+    0.025,
+    0.05
+  ],
+  "portfolio_risk": {
+    "annual_target": 0.1,
+    "covariance_window": 63,
+    "diagonal_shrinkage": 0.5,
+    "forecast_floor": 0.03,
+    "max_scaling_multiplier": 3.0,
+    "asset_cap": 0.4,
+    "gross_cap": 2.0
+  },
+  "bootstrap": {
+    "seed": 20261014,
+    "pnl_sample": "2020-2024",
+    "paths": 5000,
+    "horizon": 756,
+    "block_lengths": [
+      20,
+      63,
+      126
+    ],
+    "full_rule_paths_per_block_length": 250,
+    "full_rule_block_lengths": [
+      126,
+      252
+    ]
+  },
+  "multiple_testing_note": "All fixed variants are recorded; full-sample winners are descriptive."
+}

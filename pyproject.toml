@@ -1,0 +1,17 @@
+[project]
+name = "multi-asset-momentum-research"
+version = "0.1.0"
+description = "Reproducible multi-asset momentum experiments with execution costs and funding"
+readme = "README.md"
+requires-python = ">=3.12"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+extend-exclude = ["tsmom_results", ".cache", ".venv", "*.ipynb"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "B", "UP"]
+
+[tool.ruff.format]
+quote-style = "double"

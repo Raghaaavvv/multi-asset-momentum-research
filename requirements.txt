@@ -1,0 +1,9 @@
+# Direct dependencies used for the recorded run; unrelated IDE packages excluded.
+numpy==2.4.6
+pandas==3.0.3
+matplotlib==3.11.0
+yfinance==1.4.1
+nbformat==5.10.4
+nbclient==0.11.0
+ipykernel==7.3.0
+jupyter_client==8.9.1

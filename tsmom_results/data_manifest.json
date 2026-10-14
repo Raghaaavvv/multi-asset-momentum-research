@@ -1,0 +1,19 @@
+{
+  "source": "Yahoo Finance via yfinance",
+  "tickers": [
+    "SPY",
+    "TLT",
+    "GLD",
+    "USO",
+    "DBA",
+    "UUP"
+  ],
+  "start_inclusive": "2010-01-01",
+  "end_exclusive": "2025-01-01",
+  "auto_adjust": true,
+  "yfinance_version": "1.4.1",
+  "cache_format": "CSV",
+  "sha256": "2881bc3a0c1889904eea4037e4683fa5eb500dacb5516dcd6bce017ea5a589a5",
+  "observations": 3774,
+  "note": "Adjusted OHLC are total-return proxies, not historical executable quotes."
+}

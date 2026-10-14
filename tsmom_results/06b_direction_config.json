@@ -1,0 +1,17 @@
+{
+  "annual_funding_rates": {
+    "cash_rate": 0.02,
+    "debit_rate": 0.05,
+    "short_borrow_rate": 0.01
+  },
+  "risk_free_annual": 0.02,
+  "execution": "next_open",
+  "frequency": "daily",
+  "long_only_rule": "clip negatives to zero; no renormalization",
+  "borrow_sensitivity_rates": [
+    0.0,
+    0.01,
+    0.03
+  ],
+  "note": "Fixed illustrative rates, not historical realized broker rates."
+}
